@@ -7,7 +7,7 @@
     tools:context=".AddNotes">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/etTitle"
         android:layout_width="269dp"
         android:layout_height="60dp"
         android:ems="10"
@@ -20,17 +20,18 @@
         app:layout_constraintVertical_bias="0.248" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/etDes"
         android:layout_width="269dp"
         android:layout_height="60dp"
         android:layout_marginTop="76dp"
+        android:layout_marginBottom="364dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Enter Description Here"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/etTitle"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -38,9 +39,13 @@
         android:layout_width="172dp"
         android:layout_height="62dp"
         android:layout_marginEnd="44dp"
+        android:onClick="buAdd"
         android:background="@drawable/bublue"
         android:layout_marginBottom="136dp"
         android:text="Add Note"
+        android:elevation="9pt"
+        android:textSize="7pt"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
