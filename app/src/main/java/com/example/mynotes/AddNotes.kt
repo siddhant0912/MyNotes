@@ -10,6 +10,7 @@ import java.lang.Exception
 
  class AddNotes : AppCompatActivity() {
      var id =0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_notes)
@@ -43,6 +44,7 @@ import java.lang.Exception
             val ID = dbManager.Update(value,"ID=?",selectionArgs)
             if (ID > 0) {
                 Toast.makeText(this, "Note is updated", Toast.LENGTH_LONG).show()
+
                 finish()
             } else {
                 Toast.makeText(this, "Failed  To update Notes", Toast.LENGTH_LONG).show()

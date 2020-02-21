@@ -23,18 +23,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //Add Dummy data
-        /*
-        listNotes.add(Note(1,"Meet Prof","Myself siddhant and i like to do programming in kotlin, its a nice day, be happy and keep coding."))
-        listNotes.add(Note(2,"Meet student","Myself siddhant and i like to do programming in kotlin, its a nice day, be happy and keep coding."))
-
-        listNotes.add(Note(3,"Meet teacher","Myself siddhant and i like to do programming in kotlin, its a nice day, be happy and keep coding."))
-         */
-
-
         //load from database
         LoadQuery("%")
-
+    }
+    override fun onResume() {
+        super.onResume()
+        LoadQuery("%")
     }
     fun LoadQuery(title:String){
         var dbManager = DbManager(this)
@@ -65,11 +59,11 @@ class MainActivity : AppCompatActivity() {
         sv.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
                 Toast.makeText(applicationContext,query,Toast.LENGTH_LONG).show()
-                //TODO Search Database
                 LoadQuery("%" + query +"%")
                 return false
             }
             override fun onQueryTextChange(newText: String?): Boolean {
+                LoadQuery("%" + newText + "%")
                 return false
             }
         })
