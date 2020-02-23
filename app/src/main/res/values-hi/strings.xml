@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">मेरी टिप्पणियाँ</string>
+    <string name="add">नोट्स जोड़ें</string>
+    <string name="TitleHint">यहां शीर्षक दर्ज करें</string>
+    <string name="desHint">यहाँ विवरण दर्ज करें</string>
+</resources>
